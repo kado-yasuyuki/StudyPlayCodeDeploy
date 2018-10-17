@@ -9,7 +9,12 @@ import play.api.mvc._
  * application's home page.
  */
 @Singleton
-class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
+class HomeController @Inject()(
+                                cc: ControllerComponents,
+                                conf: Configuration
+                              ) extends AbstractController(cc) {
+
+  private[this] val message = conf.get[String]("display.message")
 
   /**
    * Create an Action to render an HTML page.
@@ -19,6 +24,6 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
    * a path of `/`.
    */
   def index() = Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.index())
+    Ok(views.html.index(message))
   }
 }
