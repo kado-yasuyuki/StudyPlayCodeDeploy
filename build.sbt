@@ -37,8 +37,5 @@ rpmLicense := Some("no license")
 daemonUser := "root"
 
 javaOptions in Universal ++= Seq(
-  // Use separate configuration file for production environment
-  s"-Dconfig.file=/usr/share/${packageName.value}/conf/production.conf",
-
   s"-Dpidfile.path=/var/run/${packageName.value}/play.pid",
 )
