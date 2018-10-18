@@ -1,3 +1,3 @@
 #!/bin/bash
 
-service studyplaycodedeploy start
+service study-play-code-deploy start

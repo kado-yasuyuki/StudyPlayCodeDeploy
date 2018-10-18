@@ -1,3 +1,3 @@
 #!/bin/bash
 
-service studyplaycodedeploy stop
+service study-play-code-deploy stop

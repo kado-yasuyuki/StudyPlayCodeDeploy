@@ -1,3 +1,3 @@
 #!/bin/bash
 
-yum erase -y studyplaycodedeploy
+yum erase -y study-play-code-deploy.noarch
